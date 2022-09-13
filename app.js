@@ -43,7 +43,7 @@ app.use("/api", indexRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
-cron.schedule("0 */10 * * *", ethereumPrice);
+cron.schedule("0 */10 * * * *", ethereumPrice);
 
 // error handler
 app.use(function (err, req, res, next) {
